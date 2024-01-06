@@ -10,14 +10,28 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        table {
-            width: 300px;
-            border-collapse: collapse;
+        h1 {
+            text-align: center;
         }
 
-        td, th {
-            border: 1px solid black;
-            padding: 3px;
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+            margin: auto;
+        }
+
+        caption {
+            background-color: lightgray;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
         }
 
         thead, tfoot {
@@ -25,9 +39,27 @@
             color: white;
         }
 
+        tbody > tr:nth-child(even) { /*2n*/
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(odd) { /*2n-1*/
+            background-color: lightgray;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        th#populacao {
+            width: 100px;
+        }
+
         td.num {
             text-align: right;
         }
+
     </style>
 
 </head>
@@ -36,19 +68,24 @@
     <!--
         Anatomia para tabelas grandes
         table
+            caption = legenda
             thead
                 tr, td,th
             tbody
                 tr, td,th
             tfoot
                 tr, td,th
+
+        col  = título da colula 
+        row = título da linha
     -->
 
 <table>
+    <caption>Populão das Unidades federativas</caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>Populão</th>
+            <th scope="col">Estado</th>
+            <th id="populacao">Populão</th>
         </tr>
     </thead>
 
@@ -164,11 +201,16 @@
     </tbody>
 
     <tfoot>
-        <th>Total de habitantes</th>
+        <th scope="row">Total de habitantes</th>
         <td class="num"><strong>000000</strong></td>
     </tfoot>
 
 </table>
 
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ex repellendus quasi rem provident ipsum exercitationem, esse omnis. Aliquid, dicta voluptate sit distinctio assumenda obcaecati dignissimos doloribus architecto, nihil accusamus veniam eius repellendus odit vel sunt sed sint quasi illo, asperiores nisi laudantium? Laboriosam, repellat nihil! Veritatis soluta quia ipsam sapiente qui ipsa animi natus, eos dolores eius laboriosam! Optio necessitatibus, sunt corporis voluptates temporibus alias, quod unde maiores nulla aperiam eius debitis voluptas enim libero iusto eos esse magnam odit ducimus sit quas tempore error. Odit amet nisi reprehenderit in repellendus cumque earum dolores perferendis, obcaecati quaerat veritatis iure?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ex repellendus quasi rem provident ipsum exercitationem, esse omnis. Aliquid, dicta voluptate sit distinctio assumenda obcaecati dignissimos doloribus architecto, nihil accusamus veniam eius repellendus odit vel sunt sed sint quasi illo, asperiores nisi laudantium? Laboriosam, repellat nihil! Veritatis soluta quia ipsam sapiente qui ipsa animi natus, eos dolores eius laboriosam! Optio necessitatibus, sunt corporis voluptates temporibus alias, quod unde maiores nulla aperiam eius debitis voluptas enim libero iusto eos esse magnam odit ducimus sit quas tempore error. Odit amet nisi reprehenderit in repellendus cumque earum dolores perferendis, obcaecati quaerat veritatis iure?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ex repellendus quasi rem provident ipsum exercitationem, esse omnis. Aliquid, dicta voluptate sit distinctio assumenda obcaecati dignissimos doloribus architecto, nihil accusamus veniam eius repellendus odit vel sunt sed sint quasi illo, asperiores nisi laudantium? Laboriosam, repellat nihil! Veritatis soluta quia ipsam sapiente qui ipsa animi natus, eos dolores eius laboriosam! Optio necessitatibus, sunt corporis voluptates temporibus alias, quod unde maiores nulla aperiam eius debitis voluptas enim libero iusto eos esse magnam odit ducimus sit quas tempore error. Odit amet nisi reprehenderit in repellendus cumque earum dolores perferendis, obcaecati quaerat veritatis iure?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ex repellendus quasi rem provident ipsum exercitationem, esse omnis. Aliquid, dicta voluptate sit distinctio assumenda obcaecati dignissimos doloribus architecto, nihil accusamus veniam eius repellendus odit vel sunt sed sint quasi illo, asperiores nisi laudantium? Laboriosam, repellat nihil! Veritatis soluta quia ipsam sapiente qui ipsa animi natus, eos dolores eius laboriosam! Optio necessitatibus, sunt corporis voluptates temporibus alias, quod unde maiores nulla aperiam eius debitis voluptas enim libero iusto eos esse magnam odit ducimus sit quas tempore error. Odit amet nisi reprehenderit in repellendus cumque earum dolores perferendis, obcaecati quaerat veritatis iure?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ex repellendus quasi rem provident ipsum exercitationem, esse omnis. Aliquid, dicta voluptate sit distinctio assumenda obcaecati dignissimos doloribus architecto, nihil accusamus veniam eius repellendus odit vel sunt sed sint quasi illo, asperiores nisi laudantium? Laboriosam, repellat nihil! Veritatis soluta quia ipsam sapiente qui ipsa animi natus, eos dolores eius laboriosam! Optio necessitatibus, sunt corporis voluptates temporibus alias, quod unde maiores nulla aperiam eius debitis voluptas enim libero iusto eos esse magnam odit ducimus sit quas tempore error. Odit amet nisi reprehenderit in repellendus cumque earum dolores perferendis, obcaecati quaerat veritatis iure?</p>
 </body>
 </html>
